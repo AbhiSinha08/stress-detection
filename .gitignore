@@ -1,0 +1,10 @@
+# Client Dependencies
+/client/node_modules
+/client/build
+
+# Environments
+**/.env
+/venv/
+
+# Cache
+**/__pycache__/
