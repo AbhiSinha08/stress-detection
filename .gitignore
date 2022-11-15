@@ -11,3 +11,4 @@
 
 # Saved ML Model
 /model/trained_model.sav
+/model/train_model.py
