@@ -1,12 +1,13 @@
-import os
 from flask import Flask, send_from_directory
 from flask_cors import CORS
 import json
+import model
 
-#os.chdir(__file__.replace(os.path.basename(__file__), ''))
+import os
+os.chdir(__file__.replace(os.path.basename(__file__), ''))
 
 
-app = Flask(__name__, static_folder='./build')
+app = Flask(__name__, static_folder='../client/build')
 CORS(app)
 
 # Serve React App
