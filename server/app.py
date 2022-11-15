@@ -12,6 +12,7 @@ CORS(app)
 
 TEST_CASE_DATA_PATH = "../model/data/raw_subset"
 
+
 # Serve React App
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
@@ -24,16 +25,15 @@ def serve(path):
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    selected_feats =   [
-        'BVP_mean', 'BVP_std', 'EDA_phasic_mean', 'EDA_phasic_min', 'EDA_smna_min', 
-        'EDA_tonic_mean', 'Resp_mean', 'Resp_std', 'TEMP_mean', 'TEMP_std', 'TEMP_slope',
-        'BVP_peak_freq', 'age', 'height', 'weight'
-    ]
-    data = request.josn[selected_feats]
+    data = []
+    for feat in model.selected_feats:
+        data.append(request.json[feat])
+    
     result, prob = model.predict(data)
     return json.dumps({
         'res': result,
-        'prob': prob
+        'prob': prob,
+        'labels': model.labels
     })
 
 
