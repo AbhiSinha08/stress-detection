@@ -8,3 +8,6 @@
 
 # Cache
 **/__pycache__/
+
+# Saved ML Model
+/model/trained_model.sav
