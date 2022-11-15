@@ -8,6 +8,8 @@
 ## Tech Stack used
 ### ML Model
 - Python
+- Scikit Learn
+- Random Forest Classifier
 ### Application For demonstration
 - React.JS
 - Flask

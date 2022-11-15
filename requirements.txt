@@ -118,12 +118,6 @@ stack-data==0.6.0
 tensorboard==2.10.1
 tensorboard-data-server==0.6.1
 tensorboard-plugin-wit==1.8.1
-tensorflow==2.10.0
-tensorflow-datasets==4.7.0
-tensorflow-estimator==2.10.0
-tensorflow-io-gcs-filesystem==0.27.0
-tensorflow-metadata==1.10.0
-tensorflow-probability==0.18.0
 termcolor==2.1.0
 terminado==0.17.0
 threadpoolctl==3.1.0
