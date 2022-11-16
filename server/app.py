@@ -50,6 +50,13 @@ def test_case(num):
         "EDA": EDA
     })
 
+@app.route('/testresult<int:num>')
+def test_result(num):
+    with open(f"test_results/test{num}.json", 'r') as f:
+        res = f.read()
+
+    res = json.dumps(res)
+    return res
 
 if __name__ == '__main__':
     app.run(use_reloader=True, host='0.0.0.0', port=80, threaded=True)
