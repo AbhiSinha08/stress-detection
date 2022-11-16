@@ -3,7 +3,7 @@ import APITest from "./APITest";
 
 function Dashboard() {
     return ( 
-        <div className="overflow-y-scroll">
+        <div className="overflow-y-scroll h-[85vh]">
             <Graphs />
             <APITest />
         </div>

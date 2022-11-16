@@ -39,7 +39,6 @@ def predict():
 
 @app.route('/test/<int:num>')
 def test_case(num):
-    print(model.predict)
     with open(f"{TEST_CASE_DATA_PATH}/BVP_{num}.csv", 'r') as f:
         BVP = f.read()
     with open(f"{TEST_CASE_DATA_PATH}/EDA_{num}.csv", 'r') as f:
@@ -50,7 +49,7 @@ def test_case(num):
         "EDA": EDA
     })
 
-@app.route('/testresult<int:num>')
+@app.route('/testresult/<int:num>')
 def test_result(num):
     with open(f"test_results/test{num}.json", 'r') as f:
         res = f.read()

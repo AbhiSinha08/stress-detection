@@ -3,7 +3,7 @@
 /client/build
 
 # Environments
-**/.env
+/client/.dev.env
 /venv/
 
 # Cache
