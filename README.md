@@ -5,6 +5,8 @@
 
 <br />  
 
+## [Presentation](Presentation.pdf)
+
 ## Tech Stack used
 ### ML Model
 - Python
@@ -14,6 +16,7 @@
 ### Application For demonstration
 - React.JS
 - Flask
+- Hosted at [http://15.206.150.71/](http://15.206.150.71/)
 
 <br />  
 
