@@ -1,8 +1,7 @@
 #! /bin/bash
 
 cd client
-npm install --save-dev
-npm build
+npm run build
 
 cd ../server
 sudo python3 app.py

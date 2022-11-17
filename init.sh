@@ -9,6 +9,10 @@ git clone https://github.com/AbhiSinha08/stress-detection.git
 cd stress-detection
 pip install -r requirements.txt
 
+cd client
+npm install --save-dev
+cd ..
+
 chmod +x train.sh
 chmod +x server.sh
 
