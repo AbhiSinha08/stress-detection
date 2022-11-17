@@ -53,7 +53,10 @@ function APITest() {
 
     return (
         <>
-            <div className="flex justify-between mx-auto w-[60%] mt-16 flex-wrap">
+            <div className="text-3xl text-center text-white/60 mt-8 mb-4">
+                Model Demonstration
+            </div>
+            <div className="flex justify-between mx-auto w-[60%] flex-wrap">
                 <InputField inputs={inputs} setInputs={setInputs} name="BVP_mean" />
                 <InputField inputs={inputs} setInputs={setInputs} name="BVP_std" />
                 <InputField inputs={inputs} setInputs={setInputs} name="EDA_phasic_mean" />
@@ -76,8 +79,8 @@ function APITest() {
             </div>
 
             {processedResults && (
-                <div className="flex justify-center items-center text-2xl">
-                    <PieChart data={processedResults} width={700} height={700} outerRadius={200} />
+                <div className="flex justify-center items-center text-2xl rounded-xl bg-black/20 mx-16 mt-8">
+                    <PieChart data={processedResults} width={500} height={500} outerRadius={200} label />
                     <div className="flex flex-col gap-4">
                         {processedResults.map((entry, index) => (
                             <div className="flex gap-4 items-center">

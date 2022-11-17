@@ -1,6 +1,7 @@
 from flask import Flask, send_from_directory, request
 from flask_cors import CORS
 import json
+import csv
 import model
 
 import os
@@ -40,9 +41,27 @@ def predict():
 @app.route('/test/<int:num>')
 def test_case(num):
     with open(f"{TEST_CASE_DATA_PATH}/BVP_{num}.csv", 'r') as f:
-        BVP = f.read()
+        csvReader = csv.DictReader(f)
+        BVP = []
+        for rows in csvReader:
+            key = rows['seconds']
+            if rows['BVP']:
+                BVP.append({
+                    "timestamp": round(int(key)/1000, 1),
+                    "value": rows['BVP']
+                })
+        
+        
     with open(f"{TEST_CASE_DATA_PATH}/EDA_{num}.csv", 'r') as f:
-        EDA = f.read()
+        csvReader = csv.DictReader(f)
+        EDA = []
+        for rows in csvReader:
+            key = rows['seconds']
+            if rows['EDA']:
+                EDA.append({
+                    "timestamp": round(int(key)/1000, 1),
+                    "value": rows['EDA']
+                })
 
     return json.dumps({
         "BVP": BVP,

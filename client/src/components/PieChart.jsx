@@ -24,7 +24,7 @@ function Chart(props) {
                 data={props.data}
                 dataKey="prob"
                 outerRadius={props.outerRadius}
-                label={renderCustomizedLabel}
+                label={props.label ? renderCustomizedLabel: null}
             >
                 {
                     props.data.map((entry, index) => <Cell key={entry.name} fill={COLORS[index % COLORS.length]} />)

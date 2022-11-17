@@ -5,7 +5,7 @@ import SelectedContext from "./Contexts";
 import { useState } from "react";
 
 function App() {
-    const [selected, setSelected] = useState(2);
+    const [selected, setSelected] = useState(1);
     return (
         <SelectedContext.Provider value={{selected, setSelected}}>
         <div>

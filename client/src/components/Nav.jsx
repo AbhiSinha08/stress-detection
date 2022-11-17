@@ -2,7 +2,7 @@ import TestCaseBtn from "./TestCaseBtn";
 
 function Nav() {
     return ( 
-        <div className="mt-4 relative flex flex-col gap-8 right-2 w-[30%] pr-6 border-r-[1px] border-white rounded-lg">
+        <div className="mt-4 relative flex flex-col gap-8 right-2 w-[30%] pr-8 bg-black/20 rounded-2xl">
             <br />
             <TestCaseBtn number={1} />
             <TestCaseBtn number={2} />
