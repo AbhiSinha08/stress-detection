@@ -16,7 +16,7 @@
 ### Application For demonstration
 - React.JS
 - Flask
-- Hosted at [http://15.206.150.71/](http://15.206.150.71/)
+- Hosted at [http://15.206.150.71/](http://15.206.150.71/) (Not Active Anymore)
 
 <br />  
 
